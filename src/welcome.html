@@ -2,6 +2,7 @@
 
   <!-- Equivalent of a js import + template cache -->
   <require from='./hello/hello'></require>
+  <require from="../plugins/components/ai-btn/ai-btn"></import>
 
   <!-- Equivalent of an angular 1.* directive -->
   <hello></hello>
@@ -26,6 +27,7 @@
         <p class="help-block">${fullName | upper}</p>
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
+      <ai-btn>btn</ai-btn>
     </form>
   </section>
 </template>
