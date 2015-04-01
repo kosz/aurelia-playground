@@ -17,8 +17,12 @@ export class App {
         moduleId: './flickr',
         nav: true,
         title: 'Hello'
-      }
-      ]);
+      },{
+        route: 'todo',
+        moduleId: './todo/todo',
+        nav: true,
+        title: 'Todo'
+      }]);
     });
   }
 }
