@@ -1,3 +1,8 @@
 <template>
-  <b>Test</b>
+  <b>List</b>
+  <ul>
+    <li repeat.for="todo of todos">
+      ${todo.text} : ${todo.done}
+    </li>
+  </ul>
 </template>
