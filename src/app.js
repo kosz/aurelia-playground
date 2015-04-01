@@ -12,6 +12,11 @@ export class App {
         moduleId: './welcome',      
         nav: true, 
         title:'Welcome' 
+      }, {
+        route: 'hello',
+        moduleId: './flickr',
+        nav: true,
+        title: 'Hello'
       }
       ]);
     });
