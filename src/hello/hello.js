@@ -1,5 +1,8 @@
+import {CustomService} from 'custom-service/custom-service';
+
 export class Hello {
-  constructor() {
-    this.hello = 'Hello';
+  static inject() { return [CustomService]; }
+  constructor(service) {
+    this.service = service;
   }
 }

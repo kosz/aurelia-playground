@@ -1,11 +1,12 @@
 import {HttpClient} from 'aurelia-http-client';
+import {CustomService} from 'custom-service/custom-service';
 
 var url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=rainier&tagmode=any&format=json';
 
 export class Flickr{
-  static inject() { return [HttpClient]; }
-  constructor(http){
-    this.heading = 'Flickr';
+  static inject() { return [HttpClient,CustomService]; }
+  constructor(http,service){
+    this.service = service;
     this.images = [];
     this.http = http;
   }

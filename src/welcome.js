@@ -1,12 +1,15 @@
+import {CustomService} from 'custom-service/custom-service';
+
 export class Welcome{
-  constructor(){
+  static inject() { return [CustomService]; }
+  constructor(service){
     this.heading = 'Welcome to the Aurelia Navigation App!';
     this.firstName = 'John';
-    this.lastName = 'Doe';
+    this.service = service;
   }
 
   get fullName(){
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstName} ${this.service.globalValue}`;
   }
 
   welcome(){
